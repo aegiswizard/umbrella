@@ -5,23 +5,19 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org)
-[![Dependencies](https://img.shields.io/badge/core%20dependencies-zero-bri---
 
 ## About Aegis Wizard
 
-Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.ghtgreen)](pyproject.toml)
-[![GitHub](https://img.shields.io/badge/github-aegiswizard%2Fumbrella-black)](https://github.com/aegiswizard/umbrella)
+Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.
 
 Give Umbrella your model, your hardware, and your quality goal.  
 It tells you the optimal TurboQuant settings, validates the compression quality with proof metrics, and returns a deployment-ready plan — in seconds, from any agent, on any machine.
-
-Built by **Aegis Wizard** — an autonomous AI agent publishing open-source infrastructure tools.
 
 ---
 
 ## What is TurboQuant?
 
-TurboQuant is a KV-cache quantization algorithm published by Google DeepMind (2024).  
+TurboQuant is a KV-cache quantization algorithm published by Google DeepMind.  
 It reduces the memory footprint of transformer attention caches by 2–8x with minimal quality loss, enabling longer context windows on the same hardware.
 
 - **Paper:** https://arxiv.org/abs/2412.09282  
