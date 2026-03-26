@@ -1,0 +1,59 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name        = "umbrella-tq"
+version     = "1.0.0"
+description = "Agent-native TurboQuant KV cache compression and validation. CLI, HTTP, MCP. Don't just quantize. Prove it fits."
+readme      = "README.md"
+license     = { text = "MIT" }
+authors     = [{ name = "Aegis Wizard" }]
+keywords    = ["turbo-quant", "turboquant", "kv-cache", "quantization", "llm", "agent", "mcp", "openclaw", "compression"]
+requires-python = ">=3.10"
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+# Zero hard dependencies — everything optional so it works on any machine
+dependencies = []
+
+[project.optional-dependencies]
+pytorch = ["torch>=2.0"]
+full    = ["torch>=2.0", "turboquant"]
+serve   = ["fastapi>=0.100", "uvicorn>=0.20"]
+memory  = ["psutil>=5.9"]
+all     = ["torch>=2.0", "turboquant", "fastapi>=0.100", "uvicorn>=0.20", "psutil>=5.9"]
+dev     = ["pytest>=7.0", "black>=23.0", "ruff>=0.1", "httpx>=0.24"]
+
+[project.scripts]
+umbrella = "umbrella.cli:main"
+
+[project.urls]
+Homepage   = "https://github.com/aegiswizard/umbrella"
+Repository = "https://github.com/aegiswizard/umbrella"
+Issues     = "https://github.com/aegiswizard/umbrella/issues"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["umbrella*"]
+
+[tool.black]
+line-length    = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select      = ["E", "F", "I"]

@@ -1,0 +1,81 @@
+# Umbrella 🌂 — OpenClaw skill example
+# Drop this file into your OpenClaw skills directory, or use skill.md directly.
+#
+# Usage in OpenClaw:
+#   "check turboquant capabilities"
+#   "suggest turboquant settings for llama3-8b with 12GB VRAM and 32k context"
+#   "validate turboquant at 4-bit"
+#   "autotune turboquant for llama3-8b 12GB 32k context"
+
+name: umbrella
+version: "1.0.0"
+description: >
+  Agent-native TurboQuant KV cache compression and validation.
+  Don't just quantize. Prove it fits.
+
+triggers:
+  - "turboquant"
+  - "kv cache compression"
+  - "umbrella doctor"
+  - "umbrella suggest"
+  - "umbrella validate"
+  - "umbrella compress"
+  - "umbrella autotune"
+  - "kv memory"
+  - "will my model fit"
+  - "quantize kv"
+
+tool_import: umbrella.adapters.openclaw.register_tools
+
+tools:
+  - name: umbrella_doctor
+    description: "Check what TurboQuant capabilities are available on this machine."
+    when: "user asks about turboquant setup, hardware readiness, or machine capabilities"
+
+  - name: umbrella_suggest
+    description: "Recommend optimal TurboQuant bit-width and settings."
+    when: "user asks what bits to use, how much memory they can save, or for a recommendation"
+    required_params:
+      - model
+      - vram_gb
+      - context_length
+
+  - name: umbrella_validate
+    description: "Validate TurboQuant compression quality and return proof metrics."
+    when: "user asks to prove compression quality or validate settings"
+    default_params:
+      bits: 4
+      synthetic: true
+
+  - name: umbrella_autotune
+    description: "Full decision engine — hardware + optimal settings + validation plan."
+    when: "user wants a complete turboquant recommendation with proof plan"
+    required_params:
+      - model
+      - vram_gb
+      - context_length
+
+examples:
+  - user: "check if turboquant works on this machine"
+    tool:  umbrella_doctor
+
+  - user: "what bits should I use for llama3-8b with 12GB VRAM and 32k context?"
+    tool:  umbrella_suggest
+    params:
+      model: "llama3-8b"
+      vram_gb: 12
+      context_length: 32000
+
+  - user: "prove that 4-bit kv compression works"
+    tool:  umbrella_validate
+    params:
+      bits: 4
+      synthetic: true
+
+  - user: "autotune turboquant for llama3-8b, I have 12GB VRAM, need 32k context"
+    tool:  umbrella_autotune
+    params:
+      model: "llama3-8b"
+      vram_gb: 12
+      context_length: 32000
+      quality_mode: "balanced"
