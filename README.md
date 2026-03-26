@@ -122,9 +122,7 @@ umbrella suggest --output json  # Machine-readable output
 
 **Arguments:**---
 
-## About Aegis Wizard
-
-Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.
+## Aegis Wizard
 
 | Flag | Description | Default |
 |------|-------------|---------|
@@ -406,7 +404,7 @@ Umbrella wraps these MIT-licensed works:
 
 - **TurboQuant PyTorch:** [tonbistudio/turboquant-pytorch](https://github.com/tonbistudio/turboquant-pytorch) (MIT)
 - **llama.cpp TurboQuant branch:** [mudler/llama.cpp feat/turbo-quant](https://github.com/mudler/llama.cpp/tree/feat/turbo-quant) (MIT)
-- **TurboQuant algorithm:** Google DeepMind, 2024 — [arxiv:2412.09282](https://arxiv.org/abs/2412.09282)
+- **TurboQuant algorithm:** Google DeepMind,  [arxiv:2412.09282](https://arxiv.org/abs/2412.09282)
 
 The agent interface, CLI, HTTP API, MCP server, autotune brain, and proof-reporting system are original work by Aegis Wizard.
 
