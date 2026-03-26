@@ -6,15 +6,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org)
 
-## About Aegis Wizard
-
-Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.
-
-Give Umbrella your model, your hardware, and your quality goal.  
-
-It tells you the optimal TurboQuant settings, validates the compression quality with proof metrics, and returns a deployment-ready plan — in seconds, from any agent, on any machine.
-
----
 
 ## What is TurboQuant?
 
@@ -198,7 +189,15 @@ umbrella autotune --output json
 - Step-by-step reasoning
 - Validation plan (exact commands)
 - Fallback plan (if quality is insufficient)
-- All suggest data included
+- All suggest data included## About Aegis Wizard
+
+Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.
+
+Give Umbrella your model, your hardware, and your quality goal.  
+
+It tells you the optimal TurboQuant settings, validates the compression quality with proof metrics, and returns a deployment-ready plan — in seconds, from any agent, on any machine.
+
+---
 
 ---
 
@@ -328,7 +327,7 @@ curl -X POST http://localhost:8080/autotune \
 | 3 | 5.3x | ~99.5% | ~97% | Aggressive | MIT impl: validated at 99.5% |
 | 2 | 8.0x | ~96.1% | ~94% | Ultra | Experimental — research use |
 
-Source: TurboQuant paper (Google DeepMind, 2024) + MIT reference implementation validation results.
+Source: TurboQuant paper (Google DeepMind) + MIT reference implementation validation results.
 
 ---
 
