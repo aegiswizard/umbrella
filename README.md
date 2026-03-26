@@ -11,6 +11,7 @@
 Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.
 
 Give Umbrella your model, your hardware, and your quality goal.  
+
 It tells you the optimal TurboQuant settings, validates the compression quality with proof metrics, and returns a deployment-ready plan — in seconds, from any agent, on any machine.
 
 ---
