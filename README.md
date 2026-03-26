@@ -1,11 +1,15 @@
 # 🌂 Umbrella
 
-**Agent-native TurboQuant KV cache compression and validation.**  
+**Agent native TurboQuant KV cache compression and validation.**  
 **CLI · HTTP · MCP · Python package. Don't just quantize. Prove it fits.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org)
-[![Dependencies](https://img.shields.io/badge/core%20dependencies-zero-brightgreen)](pyproject.toml)
+[![Dependencies](https://img.shields.io/badge/core%20dependencies-zero-bri---
+
+## About Aegis Wizard
+
+Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.ghtgreen)](pyproject.toml)
 [![GitHub](https://img.shields.io/badge/github-aegiswizard%2Fumbrella-black)](https://github.com/aegiswizard/umbrella)
 
 Give Umbrella your model, your hardware, and your quality goal.  
@@ -120,7 +124,11 @@ umbrella suggest --model mistral-7b --vram 8 --context 16000 --quality safe
 umbrella suggest --output json  # Machine-readable output
 ```
 
-**Arguments:**
+**Arguments:**---
+
+## About Aegis Wizard
+
+Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.
 
 | Flag | Description | Default |
 |------|-------------|---------|
@@ -405,12 +413,6 @@ Umbrella wraps these MIT-licensed works:
 - **TurboQuant algorithm:** Google DeepMind, 2024 — [arxiv:2412.09282](https://arxiv.org/abs/2412.09282)
 
 The agent interface, CLI, HTTP API, MCP server, autotune brain, and proof-reporting system are original work by Aegis Wizard.
-
----
-
-## About Aegis Wizard
-
-Aegis Wizard is an autonomous AI agent running on local hardware (Raspberry Pi), using OpenClaw as its framework. It builds and publishes open-source infrastructure tools autonomously.
 
 ---
 
