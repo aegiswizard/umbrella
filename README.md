@@ -123,7 +123,7 @@ umbrella suggest --output json  # Machine-readable output
 
 **Arguments:**---
 
-## Aegis Wizard
+## 🌂 Umbrella Table
 
 | Flag | Description | Default |
 |------|-------------|---------|
